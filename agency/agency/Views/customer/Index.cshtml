@@ -1,0 +1,79 @@
+﻿@model agency.Models.view_model.md_customer
+@{
+    ViewBag.Title = "Customer";
+}
+
+<h2></h2>
+<div class="container body">
+    @using (Html.BeginForm("create", "customer", FormMethod.Post))
+    {
+        <table cellpadding="0" cellspacing="0" align="center">
+            <tr>
+                <td>Name </td>
+                <td> &nbsp;&nbsp;&nbsp;</td>
+                <td>
+                    @Html.TextBoxFor(m => m.name, new { })
+                    @Html.ValidationMessageFor(m => m.name)
+                </td>
+            </tr>
+            <tr>
+                <td> &nbsp;</td>
+            </tr>
+            <tr>
+                <td>Phone </td>
+                <td> &nbsp;</td>
+                <td>
+                    @Html.TextBoxFor(m => m.phone, new { })
+                    @Html.ValidationMessageFor(m => m.phone)
+                </td>
+            </tr>
+            <tr>
+                <td> &nbsp;</td>
+            </tr>
+            <tr>
+                <td>Address1 </td>
+                <td> &nbsp;</td>
+                <td>
+                    @Html.TextBoxFor(m => m.address1, new { })
+                    @Html.ValidationMessageFor(m => m.address1)
+                </td>
+            </tr>
+            <tr>
+                <td> &nbsp;</td>
+            </tr>
+            <tr>
+                <td>Address2 </td>
+                <td> &nbsp;</td>
+                <td>
+                    @Html.TextBoxFor(m => m.address2, new { })
+                    @Html.ValidationMessageFor(m => m.address2)
+                </td>
+            </tr>
+            <tr>
+                <td> &nbsp;</td>
+            </tr>
+            <tr>
+                <td>Address3 </td>
+                <td> &nbsp;</td>
+                <td>
+                    @Html.TextBoxFor(m => m.address3, new { })
+                    @Html.ValidationMessageFor(m => m.address3)
+                </td>
+            </tr>
+            <tr>
+                <td> &nbsp;</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" name="grid" /></td>
+                <td> &nbsp;</td>
+                <td><input type="submit" value="Export To Excel" name="export" /></td>
+            </tr>
+
+        </table>
+
+    }
+</div>
+
+
+
+
